@@ -15,24 +15,39 @@
   font-display: swap;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-  margin: 0;        /* Чтобы не было по краям некрасивых белых полосок */
-  font-family: "PT Sans", sans-serif;
+  margin: 0 auto;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 22px;
-  font-style: normal;     /* Далее нигде не указываю font-style, т.к. других стилей у нас нигде нет. */
+  font-style: normal;
   line-height: 26px;
   color: #333333;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 40px;
 }
 
-/* Убираем бесячие точки у списков */
-
-ul {
+.navigation-list,
+.navigation-user,
+.advantages-list,
+.services-list,
+.footer-social-list,
+.breadcrumbs,
+.catalog-filter-list,
+.sort-list,
+.card-list,
+.pagination {
+  padding: 0;
+  margin: 0;
   list-style-type: none;
 }
-
-
-/* Прячем ненужное. Да, это я честно стырил из Блога Академии))) */
 
 .visually-hidden {
   position: absolute;
@@ -48,10 +63,6 @@ ul {
 }
 
 /* Header */
-
-/* Сначала добавил .page-header, но потом удалил, т.к. фон совпадает с body.  */
-/* Решил указать цвет текста в .navigation-link, т.к. кроме этих трех ссылок */
-/* в хедере нет видимого текста, а кнопки будем стилизовать отдельно. */
 
 .navigation-link {
   font-weight: 700;
@@ -70,7 +81,8 @@ ul {
 /* Кнопки */
 
 .button {
-  color: #FFFFFF;
+  font-family: "PT Sans", "Arial", sans-serif;
+  color: #ffffff;
   border-radius: 4px;
   border: 0;
   font-weight: 700;
@@ -103,14 +115,14 @@ ul {
   font-size: 20px;
   line-height: 36px;
   padding: 8px 50px;
-  background-color: #82B3D3;
+  background-color: #82b3d3;
 }
 
 /* Кнопки фильтра */
 
 .catalog-filter-submit {
   padding: 8px 50px;
-  background-color: #82B3D3;
+  background-color: #82b3d3;
 }
 
 .catalog-filter-reset {
@@ -126,22 +138,20 @@ ul {
 }
 
 .object-button {
-  background-color: #82B3D3;
+  background-color: #82b3d3;
   padding: 8px 20px;
 }
 
 .green {
-  background: #7DB54F;
+  background: #7db54f;
 }
-
 
 /* Main Главная */
 
 .hero {
   background-image: url("../images/background/index-background.jpg");
   background-repeat: no-repeat;
-  background-size: 100%; /* Сделал так потому что при width: 1200px; фон на весь экран не растягивается  */
-  height: 485px;
+  background-size: 1200px;
 }
 
 .advantages-heading,
@@ -154,8 +164,6 @@ ul {
   text-transform: uppercase;
   color: #000000;
 }
-
-/* У группы элементов указанных ниже цвет и стиль текста описаны в body  */
 
 .advantages-description,
 .services-description,
@@ -184,56 +192,45 @@ ul {
   text-align: center;
 }
 
-.advantages-list li:first-child,
-.advantages-list li:last-child {
-  background-color: #82B3D3;
+.advantages-item-blue {
+  background-color: #82b3d3;
 }
 
-
-.advantages-list li:nth-child(3),
-.services-list li:first-child,
-.services-list li:last-child {
+.light-blue {
   background: rgba(131, 179, 211, 0.2);
-  /* Скорее всего, неправильно использовать два формата цвета, но как в        */
-  /* шестнадцатиричной системе сделать прозрачным только фон, я так и не понял((( */
 }
 
 /* Иконки услуг */
 
-.services-list li:first-child {
+.services-item-house {
   background-image: url("../images/services-icons/icon-housing.svg");
   background-repeat: no-repeat;
 }
 
-.services-list li:nth-child(2) {
+.services-item-eat {
   background-image: url("../images/services-icons/icon-eating.svg");
   background-repeat: no-repeat;
 }
 
-.services-list li:last-child {
+.services-item-souvenirs {
   background-image: url("../images/services-icons/icon-souvenir.svg");
   background-repeat: no-repeat;
 }
 
-
-
-
 .white-title {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .white-text {
-  color: #FFFFFF;
+  color: #ffffff;
 }
-
 
 /* Подписка */
 
 .subscribe {
   background-image: url("../images/background/background-subscribe.jpg");
   background-repeat: no-repeat;
-  background-size: 100%; /* Сделал так потому что при width: 1200px; фон на весь экран не растягивается  */
-  height: 414px;
+  background-size: 1200px;
 }
 
 .subscribe-title {
@@ -242,17 +239,16 @@ ul {
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .subscribe-description {
   font-weight: 400;
-font-size: 22px;
-line-height: 26px;
-text-align: center;
-color: #FFFFFF;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: #ffffff;
 }
-
 
 /* Footer */
 
@@ -266,32 +262,26 @@ color: #FFFFFF;
   color: #000000;
 }
 
-
-
-/* Страница каталога. Хедер и футер уже оформлены. Осталось основное содержимое. */
+/* Страница каталога */
 
 .catalog-header {
   background-image: url("../images/background/background-filter.jpg");
   background-repeat: no-repeat;
-  background-size: 100%; /* Сделал так потому что при width: 1200px; фон на весь экран не растягивается  */
-  height: 412px;
+  background-size: 1200px;
 }
-/* С фоном страница выглядит ужасно конечно, но когда расставим всё по местам - будет норм)) */
-
-
 
 .inner-header-title {
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .breadcrumbs-link {
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .catalog-filter-title,
@@ -300,14 +290,14 @@ color: #FFFFFF;
   font-size: 20px;
   line-height: 24px;
   text-transform: capitalize;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .catalog-filter-item {
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .results-search {
@@ -325,9 +315,13 @@ color: #FFFFFF;
 }
 
 .sort-link {
-  border: 2px solid #E5E5E5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 48px;
+  border: 2px solid #e5e5e5;
   border-radius: 4px;
-  padding: 14px 12px;
 }
 
 .sort-link-active {
@@ -360,35 +354,44 @@ color: #FFFFFF;
 }
 
 .object-rating {
-  background: #F2F2F2;
+  background: #f2f2f2;
   border-radius: 4px;
-  padding-top: 9px;
-  padding-bottom: 8px;
-  padding-right: 22px;
-  padding-left: 23px;
+  padding: 9px 22px 8px 23px;
 }
-
 
 /* Пагинация */
 
 .pagination-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #FFFFFF;
-  background-color: #82B3D3;
+  color: #ffffff;
+  background-color: #82b3d3;
   border-radius: 4px;
   text-align: center;
+  height: 60px;
+  width: 60px;
+}
+
+.pagination-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  line-height: 36px;
+  height: 60px;
+  width: 60px;
 }
 
 .pagination-current {
   color: #000000;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
-
-
 
 /* Подписка в каталоге */
 

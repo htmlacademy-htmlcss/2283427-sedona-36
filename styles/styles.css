@@ -135,6 +135,7 @@ body {
   display: flex;
   align-items: center;
   padding: 0 12px;
+  text-decoration: none;
 }
 
 .user-button {
@@ -144,6 +145,28 @@ body {
 
 .navigation-logo {
   position: absolute;
+}
+
+.circle-green {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #7db54f;
+  position: relative;
+  z-index: 1;
+  right: 12px;
+  bottom: 11px;
+  justify-content: center;
+  align-items: center;
+}
+
+.quantity {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 10px;
+  text-align: center;
+  color: #ffffff;
 }
 
 /* Кнопки */
@@ -522,6 +545,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  fill: #000000;
+}
+
+.social-icon {
+  fill: #83b3d3;
 }
 
 /* Страница каталога */
@@ -554,7 +582,7 @@ body {
 .breadcrumbs {
   display: flex;
   justify-content: start;
-  gap: 10px;
+  gap: 28px;
 }
 
 .breadcrumbs-link {
@@ -562,6 +590,19 @@ body {
   font-size: 16px;
   line-height: 21px;
   color: #ffffff;
+  position: relative;
+  display: block;
+}
+
+.breadcrumbs-link::after {
+  content: url('data:image/svg+xml; utf8, <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.91526 4.96875L2.16526 0.71875C1.91526 0.46875 1.41526 0.46875 1.04026 0.71875C0.665263 0.96875 0.790263 1.46875 1.04026 1.71875L5.16526 5.46875L1.16526 9.21875C0.915263 9.46875 0.915263 9.96875 1.16526 10.2188C1.16526 10.3438 1.54026 10.4688 1.66526 10.4688C1.79026 10.4688 2.04026 10.3438 2.16526 10.2188L6.91526 5.96875C7.29026 5.71875 7.29026 5.21875 6.91526 4.96875Z" fill="white"/></svg>  ');
+  position: absolute;
+  display: inline-block;
+  right: -20px;
+}
+
+.breadcrumbs-item:last-child .breadcrumbs-link::after {
+  content: none;
 }
 
 .catalog-filter {
@@ -627,6 +668,7 @@ body {
   min-width: 292px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+  padding-left: 20px;
 }
 
 .sort-list {
@@ -811,4 +853,145 @@ body {
   border-radius: 4px 0 0 4px;
   border: 0;
   background: #f2f2f2;
+}
+
+/* Состояния элементов */
+
+.navigation-user-button:hover,
+.search-link:hover,
+.object-detail:hover,
+.navigation-user-button:focus,
+.search-link:focus,
+.object-detail:focus {
+  background-color: #615048;
+  outline: none;
+}
+
+.navigation-user-button:active,
+.search-link:active,
+.object-detail:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.subscribe-button:hover,
+.catalog-filter-submit:hover,
+.object-button:hover,
+.subscribe-button:focus,
+.catalog-filter-submit:focus,
+.object-button:focus {
+  background-color: #68a2ca;
+  outline: none;
+}
+
+.subscribe-button:active,
+.catalog-filter-submit:active,
+.object-button:active {
+  background-color: #82b3d3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.green:hover,
+.green:focus {
+  background-color: #6c9e42;
+  outline: none;
+}
+
+.green:active {
+  background-color: #7db54f;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.catalog-filter-reset:hover {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.catalog-filter-reset:focus {
+  border: 3px solid #83b3d3;
+  outline: none;
+}
+
+.catalog-filter-reset:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.select-control:hover,
+.select-control:focus {
+  border: 2px solid #68a2ca;
+}
+
+.select-control:active {
+  border: 2px solid #3f5e72;
+}
+
+.sort-link:hover,
+.sort-link:active {
+  border: 2px solid #000000;
+}
+
+.sort-link:focus {
+  border: 2px solid #68a2ca;
+  outline: none;
+}
+
+.pagination-link:hover,
+.pagination-link:focus {
+  background-color: #68a2ca;
+}
+
+.pagination-link:active {
+  background-color: #82b3d3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.pagination-current:hover,
+.pagination-current:focus,
+.pagination-current:active {
+  color: #000000;
+  background-color: #f2f2f2;
+}
+
+.social-icon:hover {
+  fill: #68a2ca;
+}
+
+.footer-social-link:focus {
+  border: 0;
+  outline: none;
+}
+
+.footer-social-link:focus .social-icon {
+  fill: #68a2ca;
+}
+
+.footer-social-link:active .social-icon {
+  fill: rgba(104, 162, 202, 0.3);
+}
+
+.footer-contacts-phone:hover,
+.footer-contacts-phone:focus {
+  color: #756157;
+  border: 0;
+  outline: none;
+}
+
+.footer-contacts-phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.academy-img:hover {
+  fill: #756157;
+}
+
+.academy-link-logo:focus {
+  border: 0;
+  outline: none;
+}
+
+.academy-link-logo:focus .academy-img {
+  fill: #756157;
+}
+
+.academy-link-logo:active .academy-img {
+  fill: rgba(117, 97, 87, 0.3);
 }

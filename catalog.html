@@ -61,11 +61,10 @@
               <li class="breadcrumbs-item">
                 <a class="breadcrumbs-link" href="index.html">
                   <span class="visually-hidden">Главная</span>
-                  <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="breadcrumbs-main" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
-                      d="M6.5 0.5L0.5 6.30006V12.5001H12.5V6.30006L6.5 0.5ZM11.5 11.5001H1.5V6.70005L6.5 1.9L11.5 6.70005V11.5001Z"
-                      fill="white" />
-                    <path d="M4.5 10.5001H5.5V8.00005H7.5V10.5001H8.5V7.00005H4.5V10.5001Z" fill="white" />
+                      d="M6.5 0.5L0.5 6.30006V12.5001H12.5V6.30006L6.5 0.5ZM11.5 11.5001H1.5V6.70005L6.5 1.9L11.5 6.70005V11.5001Z" />
+                    <path d="M4.5 10.5001H5.5V8.00005H7.5V10.5001H8.5V7.00005H4.5V10.5001Z" />
                   </svg>
                 </a>
               </li>
@@ -123,9 +122,27 @@
             </fieldset>
             <fieldset class="catalog-filter-group range">
               <legend class="price">Стоимость, ₽:</legend>
-              <input class="range-price" type="range" id="price" name="price" min="0" max="9000" step="1">
-              <div class="output-price">
-                <output name="price"></output>
+              <div class="range-container">
+                <div class="range-wrapper-inputs">
+                  <label class="catalog-filter-label">
+                    <input class="range-input-from" type="number" value="0" name="min-price">
+                    <span class="text-from">от</span>
+                  </label>
+                  <label class="catalog-filter-label">
+                    <input class="range-input-to" type="number" value="9000" name="max-price">
+                    <span class="text-to">до</span>
+                  </label>
+                </div>
+                <div class="range-scale">
+                  <div class="range-bar" style="left: 0; width: 226px;">
+                    <button class="range-toggle toggle-min">
+                      <span class="visually-hidden">Изменить минимальную цену.</span>
+                    </button>
+                    <button class="range-toggle toggle-max">
+                      <span class="visually-hidden">Изменить максимальную цену.</span>
+                    </button>
+                  </div>
+                </div>
               </div>
             </fieldset>
             <div class="filter-buttons">

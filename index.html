@@ -28,8 +28,8 @@
             <li class="navigation-user-item">
               <a class="navigation-user-link" href="#">
                 <span class="visually-hidden">Поиск</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" fill="none">
-                  <path fill="#000"
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="20" fill="none">
+                  <path
                     d="m19.9 18-3.7-3.67c1-1.3 1.7-2.98 1.7-4.87a8 8 0 0 0-8-7.96c-4.4 0-8 3.68-8 8.06a8 8 0 0 0 12.9 6.26l3.7 3.68 1.4-1.5Zm-10-2.48a6 6 0 0 1-6-5.96 6 6 0 0 1 12 0 6 6 0 0 1-6 5.96Z" />
                 </svg>
               </a>
@@ -37,8 +37,8 @@
             <li class="navigation-user-item">
               <a class="navigation-user-link" href="#">
                 <span class="visually-hidden">Избранное</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" fill="none">
-                  <path fill="#000"
+                <svg class="favorites-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="20" fill="none">
+                  <path
                     d="M10.3 19a.9.9 0 0 1-.8-.4c-5.4-6.1-6.7-7.5-7-7.9A5.4 5.4 0 0 1 6.9 2c1.3 0 2.5.5 3.5 1.3a5.46 5.46 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z" />
                 </svg>
                 <div class="circle-green">
@@ -255,6 +255,7 @@
         <div class="modal modal-search">
           <button class="modal-close-button">
             <span class="visually-hidden">Закрыть</span>
+            <svg class="cross-button" xmlns="http://www.w3.org/2000/svg" width="21" height="20" fill="black"><path d="M17.4 4.3 16.1 3l-5.7 5.7L4.68 3l-1.3 1.3L9.1 10l-5.7 5.7L4.68 17l5.7-5.7L16.1 17l1.3-1.3-5.71-5.7 5.7-5.7Z"/></svg>
           </button>
           <section class="modal-content">
             <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
@@ -281,26 +282,34 @@
                   <div class="adults">
                     <label class="input-title adult-title" for="adults">Взрослые:</label>
                     <div class="counter-container">
-                      <button class="people-minus"></button>
+                      <button class="people-minus">
+                        <svg class="minus-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="20" fill="none"><path d="M3.4 9v2h14V9h-14Z"/></svg>
+                      </button>
                       <input class="modal-input-people" type="number" placeholder="2" name="adults" id="adults">
-                      <button class="people-plus"></button>
+                      <button class="people-plus">
+                        <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z"/></svg>
+                      </button>
                     </div>
                   </div>
                   <div class="child">
                     <label class="input-title child-title" for="child">Дети:</label>
                     <button class="button-info">
-                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg class="info-icon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="13" cy="13" r="13" fill="#83B3D3"/>
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white"/>
                       </svg>
                     </button>
-                    <div class="popover popover-child popover-open">
-                      <p class="popover-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
+                    <div class="tooltip tooltip-child tooltip-open">
+                      <p class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
                     </div>
                     <div class="counter-container">
-                      <button class="people-minus"></button>
+                      <button class="people-minus">
+                        <svg class="minus-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="20" fill="none"><path d="M3.4 9v2h14V9h-14Z"/></svg>
+                      </button>
                       <input class="modal-input-people" type="number" placeholder="2" name="child" id="child">
-                      <button class="people-plus"></button>
+                      <button class="people-plus">
+                        <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z"/></svg>
+                      </button>
                     </div>
                   </div>
                 </li>

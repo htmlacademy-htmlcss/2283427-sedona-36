@@ -55,8 +55,7 @@
       <main class="page-main main-container">
         <section class="hero">
           <h1 class="visually-hidden">Welcome</h1>
-          <img class="hero-text" src="images/background/welcome.svg" width="458" height="352"
-            alt="Welcome to the gorgeous Sedona 'Because the Grand Canyon sucks'.">
+          <img class="hero-text" src="images/background/welcome.svg" width="458" height="402" alt="Welcome to the gorgeous Sedona 'Because the Grand Canyon sucks'.">
           <img class="hero-divider" src="images/background/divider.svg" width="1200" height="57" alt="Декор фона.">
         </section>
         <section class="advantages">
@@ -91,7 +90,7 @@
               <img class="advantages-img" src="images/advantages/advantages-bridge.jpg" width="800" height="385"
                 alt="Гранд-Каньон.">
               <div class="small-container">
-                <h3 class="advantages-title white-title">Там есть мост дьявола</h3>
+                <h3 class="advantages-title white-title">Там есть<br> мост дьявола</h3>
                 <span class="white-rectangle"></span>
                 <p class="advantages-text white-text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
@@ -217,7 +216,7 @@
           </ul>
         </section>
         <section class="footer-contacts">
-          <a class="footer-contacts-phone" href="tel:+78128121212">+7(812)812-12-12</a>
+          <a class="footer-contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
         </section>
         <section class="footer-logo-academy">
           <h2 class="visually-hidden">Логотип HTML-академии</h2>
@@ -251,6 +250,7 @@
           </a>
         </section>
       </footer>
+      <!-- Для того, чтобы открыть модальное окно, необходимо добавить класс is-active. -->
       <div class="modal-container">
         <div class="modal modal-search">
           <button class="modal-close-button">
@@ -267,14 +267,14 @@
                 <li class="modal-item arrival">
                   <div class="input-container">
                     <label class="input-title arrival-title" for="arrival">Дата Заезда:</label>
-                    <input class="modal-input" type="date" name="arrival" id="arrival">
+                    <input class="modal-input" type="text" placeholder="Укажите дату" value="27 апреля 2020" name="arrival" id="arrival">
                   </div>
                   <span class="error-text">Мы не можем отправить вас в прошлое.</span>
                 </li>
                 <li class="modal-item departure">
                   <div class="input-container">
                     <label class="input-title departure-title" for="departure">Дата Выезда:</label>
-                    <input class="modal-input" type="date" name="departure" id="departure">
+                    <input class="modal-input" type="text" value="1 сентября 2023" placeholder="Укажите дату" name="departure" id="departure">
                   </div>
                   <span class="free-rooms-text">На эти даты есть свободные номера. Пока есть.</span>
                 </li>
@@ -293,12 +293,7 @@
                   </div>
                   <div class="child">
                     <label class="input-title child-title" for="child">Дети:</label>
-                    <button class="button-info">
-                      <svg class="info-icon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="13" cy="13" r="13" fill="#83B3D3"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white"/>
-                      </svg>
-                    </button>
+                    <button class="button-info"></button>
                     <div class="tooltip tooltip-child tooltip-open">
                       <p class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
                     </div>

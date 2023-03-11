@@ -129,11 +129,11 @@
               <div class="range-container">
                 <div class="range-wrapper-inputs">
                   <label class="catalog-filter-label">
-                    <input class="range-input-from" type="number" value="0" name="min-price">
+                    <input class="range-input-from" type="number" value="0" placeholder="₽" name="min-price">
                     <span class="text-from">от</span>
                   </label>
                   <label class="catalog-filter-label">
-                    <input class="range-input-to" type="number" value="9000" name="max-price">
+                    <input class="range-input-to" type="number" value="9000" placeholder="₽" name="max-price">
                     <span class="text-to">до</span>
                   </label>
                 </div>
@@ -156,9 +156,9 @@
           </form>
         </section>
         <section class="catalog">
-          <h1 class="visually-hidden">Результаты поиска.</h1>
+          <h2 class="visually-hidden">Результаты поиска.</h2>
           <div class="results-header">
-            <h2 class="results-search">Найдено гостиниц: 38</h2>
+            <h3 class="results-search">Найдено гостиниц: 38</h3>
             <div class="sort-container">
               <select class="select-control" aria-label="Сортировка">
                 <option class="option" value="cheap">Сначала дешёвые</option>
@@ -199,7 +199,7 @@
             <li class="object-card">
               <a class="object-card-link" href="#">
                 <img class="object-card-image" src="images/catalog/amara.jpg" width="300" height="212" alt="Вид звездного неба из пещеры.">
-                <h3 class="object-card-title">Amara Resort & Spa</h3>
+                <h4 class="object-card-title">Amara Resort & Spa</h4>
               </a>
               <div class="price-container">
                 <p class="object-type">Гостиница</p>
@@ -230,7 +230,7 @@
             <li class="object-card">
               <a class="object-card-link" href="#">
                 <img class="object-card-image" src="images/catalog/villas.jpg" width="300" height="212" alt="Горы с облаками и радугой.">
-                <h3 class="object-card-title">Villas at Poco Diablo</h3>
+                <h4 class="object-card-title">Villas at Poco Diablo</h4>
               </a>
               <div class="price-container">
                 <p class="object-type">Гостиница</p>
@@ -261,7 +261,7 @@
             <li class="object-card">
               <a class="object-card-link" href="#">
                 <img class="object-card-image" src="images/catalog/desert.jpg" width="300" height="212" alt="Горы на фоне ясного неба.">
-                <h3 class="object-card-title">Desert Quail Inn</h3>
+                <h4 class="object-card-title">Desert Quail Inn</h4>
               </a>
               <div class="price-container">
                 <p class="object-type">Гостиница</p>
@@ -289,7 +289,7 @@
             <li class="object-card">
               <a class="object-card-link" href="#">
                 <img class="object-card-image" src="images/catalog/greentree.jpg" width="300" height="212" alt="Горы на фоне звездного неба.">
-                <h3 class="object-card-title">GreenTree Inn</h3>
+                <h4 class="object-card-title">GreenTree Inn</h4>
               </a>
               <div class="price-container">
                 <p class="object-type">Гостиница</p>
@@ -312,9 +312,6 @@
               </div>
             </li>
           </ul>
-          <div class="strip">
-            <span class="visually-hidden">Декор каталога.</span>
-          </div>
           <ul class="pagination">
             <li class="pagination-item ">
               <a class="pagination-link pagination-current">1</a>
@@ -341,7 +338,8 @@
           <p class="catalog-subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!
           </p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
-            <input class="subscribe-input" type="email" name="email" placeholder="Ваш e-mail" required>
+            <label class="visually-hidden" for="email">Ваш e-mail.</label>
+            <input class="subscribe-input" type="email" name="email" id="email" placeholder="Ваш e-mail" required>
             <button class="subscribe-button button" type="submit">Подписаться</button>
           </form>
         </section>

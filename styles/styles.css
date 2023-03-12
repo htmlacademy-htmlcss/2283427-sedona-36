@@ -27,7 +27,7 @@ html {
 }
 
 body {
-  margin: 0 auto;
+  margin: 0;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 22px;
   font-style: normal;
@@ -35,9 +35,7 @@ body {
   color: #333333;
   background-color: #f2f2f2;
   width: 100%;
-  max-width: 1280px;
-  min-width: 1200px;
-  padding: 0 40px;
+  min-width: 1280px;
   min-height: 100%;
   display: flex;
 }
@@ -46,7 +44,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  margin: 0;
+  min-width: 1200px;
+  margin: 0 auto;
   background-color: #ffffff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
@@ -285,7 +284,7 @@ body {
   background-image: url("../images/background/index-background.jpg");
   background-color: #7fc7ff;
   background-repeat: no-repeat;
-  background-size: 1200px;
+  background-size: 100% auto;
 }
 
 .hero-text {
@@ -298,7 +297,7 @@ body {
 
 .hero-divider {
   display: block;
-  width: 1200px;
+  width: 100%;
   margin: 0;
 }
 
@@ -394,32 +393,42 @@ body {
   min-height: 385px;
   width: 400px;
   padding: 20px 0;
+  position: relative;
 }
 
-.rectangle {
+.small-container::before {
+  content: '';
   width: 60px;
   height: 2px;
   background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 199px;
+  right: 169px;
 }
 
-.white-rectangle {
+.white-container::before {
+  content: '';
   width: 60px;
   height: 2px;
   background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  top: 188px;
+  right: 169px;
+  color: #ffffff;
 }
 
 .advantages-heading {
-  margin: 69px auto 0;
+  margin: 70px auto 0;
   max-width: 620px;
 }
 
 .advantages-description {
-  margin: 25px auto 90px;
+  margin: 26px auto 88px;
   max-width: 651px;
 }
 
 .advantages-title {
-  margin: 0 0 28px 0;
+  margin: 0 0 31px 0;
   max-width: 175px;
 }
 
@@ -829,7 +838,7 @@ body {
   padding-left: 20px;
   border: none;
   -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 
 .range-input-to {
@@ -845,7 +854,7 @@ body {
   padding-left: 20px;
   border: none;
   -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 
 .filter-buttons {
@@ -871,6 +880,7 @@ body {
   position: absolute;
   height: 4px;
   background-color: #ffffff;
+
 }
 
 .toggle-min {
@@ -966,7 +976,7 @@ body {
 .sort-container {
   display: flex;
   justify-content: space-between;
-  gap: 70px;
+  gap: 71px;
   position: relative;
 }
 
